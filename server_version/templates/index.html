@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automate LeekWars Attacks</title>
+    <script>
+        function showPatienceMessage() {
+            document.getElementById('patienceMessage').style.display = 'block';
+            document.getElementById('attackForm').style.display = 'none';
+        }
+    </script>
+</head>
+<body> 
+    <h1>Easily automate your LeekWars attacks :)</h1>
+    <form id="attackForm" method="POST" action="/submit" onsubmit="showPatienceMessage()">
+        <label for="leekId">LeekId on LeekWars (seen in URL when Leek chosen):</label>
+        <input type="number" id="leekId" name="leekId" required><br>
+        <label for="uname">Username on Leekwars:</label>
+        <input type="text" id="uname" name="uname" required><br>
+        <label for="passw">Password on Leekwars:</label>
+        <input type="password" id="passw" name="passw" required><br>
+        <input type="submit" value="Start fights!!">
+    </form>
+    <div id="patienceMessage" style="display: none;">Please have some patience while the fights are being processes...</div>
+</body>
+</html>

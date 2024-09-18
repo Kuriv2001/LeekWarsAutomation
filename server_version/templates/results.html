@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Fight Results</h1>
+    {% if fight_ids %}
+        <ul>
+        {% for fight_id in fight_ids %}
+            <li>Fight done: {{ fight_id }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No fights were processed.</p>
+    {% endif %}
+</body>
+</html>
